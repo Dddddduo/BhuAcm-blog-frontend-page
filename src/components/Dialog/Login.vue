@@ -66,6 +66,8 @@ const qqLogin = () => {
     "_self"
   );
 };
+
+// giteeLogin登录
 const giteeLogin = () => {
   //保留当前路径
   user.savePath(route.path);
@@ -78,6 +80,7 @@ const giteeLogin = () => {
     "_self"
   );
 };
+
 const githubLogin = () => {
   //保留当前路径
   user.savePath(route.path);
@@ -91,6 +94,7 @@ const githubLogin = () => {
     "_self"
   );
 };
+
 const handlelogin = () => {
   let reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
   if (!reg.test(loginForm.value.username)) {
@@ -105,7 +109,7 @@ const handlelogin = () => {
   login(loginForm.value).then(({ data }) => {
     if (data.flag) {
       setToken(data.data);
-      user.GetUserInfo();
+      // user.GetUserInfo();
       window.$message?.success("登录成功");
       loginForm.value = {
         username: "",

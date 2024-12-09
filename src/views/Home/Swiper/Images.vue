@@ -30,7 +30,13 @@ onMounted(() => {
   width: 100%;
   height: 70vh;
   z-index: -9;
-  background-color: #e8b5de;
+  //background-color: #00ffd0;
+	background-image: url('https://s3.bmp.ovh/imgs/2024/12/09/2937307f0ed282ca.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-radius: 15px;
+	background-attachment: fixed;
   overflow: hidden;
 
   .item {

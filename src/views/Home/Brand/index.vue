@@ -81,13 +81,17 @@ onMounted(() => {
   .artboard {
     font-family: "Fredericka the Great", Mulish, -apple-system, "PingFang SC", "Microsoft YaHei",
       sans-serif;
-    font-size: 3.5em;
+    font-size: 4.5em;
     line-height: 1.2;
     animation: titleScale 1s;
+		color: #030303;
   }
 
   .title {
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2em;
+		font-size: 1.5em;
+		font-family: 'Montserrat', sans-serif;
+		color: #6d64d9;
   }
 }
 
