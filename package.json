@@ -54,7 +54,7 @@
     "unplugin-auto-import": "^0.12.2",
     "unplugin-icons": "^0.18.5",
     "unplugin-vue-components": "^0.22.12",
-    "vite": "^5.2.10",
+    "vite": "^6.0.3",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-prismjs": "0.0.8",
     "vite-plugin-progress": "^0.0.7",
