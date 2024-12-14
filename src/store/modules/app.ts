@@ -1,4 +1,5 @@
 interface AppState {
+
   /** 侧边栏展开 */
   isCollapse: boolean;
   /** 搜索框 */
@@ -13,9 +14,11 @@ interface AppState {
   emailFlag: boolean;
   /** 左侧展开 */
   sideFlag: boolean;
+
 }
 
 export const useAppStore = defineStore("useAppStore", {
+
 	state: (): AppState => ({
 		isCollapse: false,
 		searchFlag: false,
@@ -25,6 +28,7 @@ export const useAppStore = defineStore("useAppStore", {
 		emailFlag: false,
 		sideFlag: false,
 	}),
+
 	actions: {
 		setCollapse(flag: boolean) {
 			this.isCollapse = flag;

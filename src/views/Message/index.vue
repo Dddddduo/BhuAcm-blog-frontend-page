@@ -1,15 +1,16 @@
 <template>
   <!-- 弹幕输入框 -->
   <div class="message-container">
-    <h1 class="message-title">留言板</h1>
+    <h1 class="message-title" style="color: #3399ff">留言板</h1>
     <div class="message-input">
-      <input class="input" v-model="messageContent" @click="show = true" @keyup.enter="send" placeholder="说点什么吧" />
-      <button class="send" @click="send" v-show="show">发送</button>
+      <input class="input" style="color: #3399ff" v-model="messageContent" @click="show = true" @keyup.enter="send" placeholder="说点什么吧" />
+      <button class="send" @click="send" v-show="show" style="color: #3399ff">发送</button>
     </div>
   </div>
   <!-- 弹幕列表 -->
   <div class="danmaku-container">
-    <vue-danmaku ref="danmaku" class="danmaku" use-slot v-model:danmus="messageList" :is-suspend="true">
+
+		<vue-danmaku ref="danmaku" class="danmaku" use-slot v-model:danmus="messageList" :is-suspend="true"  >
       <template v-slot:dm="{ danmu }">
         <span class="danmaku-item">
           <img :src="danmu.avatar" width="30" height="30" style="border-radius: 50%" />
@@ -18,6 +19,7 @@
         </span>
       </template>
     </vue-danmaku>
+
   </div>
 </template>
 
@@ -42,6 +44,9 @@ const send = () => {
     window.$message?.warning("留言内容不能为空");
     return false;
   }
+
+	console.log( 'name:',  blog.blogInfo.siteConfig );
+
   const userAvatar = user.avatar ? user.avatar : blog.blogInfo.siteConfig.touristAvatar;
   const userNickname = user.nickname ? user.nickname : "游客";
   let message = {
@@ -119,7 +124,8 @@ const send = () => {
   bottom: 0;
   width: 100%;
   background-color: var(--color-blue);
-  background: url("https://static.ttkwsd.top/config/e3408389cb0d4ea1b5f651873dab2a19.jpg") center no-repeat;
+  background: url("https://ooo.0x0.ooo/2024/12/14/OLCzgx.jpg") center no-repeat;
+	background-size: cover;
   animation: slideDownIn 1s;
 }
 

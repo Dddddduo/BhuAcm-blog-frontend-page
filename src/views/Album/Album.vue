@@ -1,7 +1,7 @@
 <template>
   <div class="page-header">
     <h1 class="page-title">相册</h1>
-    <img class="page-cover" src="https://static.ttkwsd.top/config/0639b8855aab4dcbb827a9884e8ec57d.jpg" alt="">
+    <img class="page-cover" src="https://ooo.0x0.ooo/2024/12/14/OLCrtc.jpg" >
     <!-- 波浪 -->
     <Waves></Waves>
   </div>
@@ -43,7 +43,7 @@ onMounted(() => {
   height: 15.625rem;
   margin: 0.375rem 0.25rem;
   border-radius: 0.5rem;
-  background: #000;
+  background: #eaa9dc;
   overflow: hidden;
 }
 

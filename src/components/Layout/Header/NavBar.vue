@@ -99,11 +99,11 @@ const menuList = [
       },
     ]
   },
-  {
-    name: "友链",
-    icon: "friend",
-    path: "/friend"
-  },
+  // {
+  //   name: "友链",
+  //   icon: "friend",
+  //   path: "/friend"
+  // },
   {
     name: "留言板",
     icon: "message",
