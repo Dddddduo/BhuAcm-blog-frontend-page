@@ -27,9 +27,10 @@ export default defineConfig((configEnv) => {
 		},
 		plugins: setupVitePlugins(viteEnv),
 		server: {
-			host: "0.0.0.0",
-			port: 1314,
-			open: true,
+			host: "127.0.0.1",
+			port: 8100,
+			// 项目启动后自动打开浏览器
+			// open: true,
 			proxy: createViteProxy(viteEnv),
 		},
 		build: {

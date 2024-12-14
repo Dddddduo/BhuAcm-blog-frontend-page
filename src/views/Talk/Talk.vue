@@ -1,7 +1,7 @@
 <template>
   <div class="page-header">
     <h1 class="page-title">说说</h1>
-    <img class="page-cover" src="https://ik.imagekit.io/nicexl/Wallpaper/ba41a32b219e4b40ad055bbb52935896_Y0819msuI.jpg"
+    <img class="page-cover" src="https://ooo.0x0.ooo/2024/12/14/OLC1GY.jpg"
       alt="">
     <Waves></Waves>
   </div>
