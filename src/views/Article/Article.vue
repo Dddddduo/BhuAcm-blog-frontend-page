@@ -156,9 +156,11 @@ const data = reactive({
     updateTime: ""
   } as ArticleInfo,
 });
+
 const { articleLoaded, wordNum, readTime, commentType, article } = toRefs(data);
 const articleCover = computed(() => (cover: string) => 'background-image:url(' + cover + ')');
 const isLike = computed(() => (id: number) => user.articleLikeSet.indexOf(id) != -1 ? "like-btn-active" : "like-btn");
+
 const count = (value: number) => {
   if (value >= 1000) {
     return (value / 1000).toFixed(1) + "k";
@@ -191,6 +193,7 @@ const like = () => {
 };
 onMounted(() => {
   getArticle(Number(route.params.id)).then(({ data }) => {
+		console.log("数据"+data.data)
     article.value = data.data;
     document.title = article.value.articleTitle;
     wordNum.value = deleteHTMLTag(article.value.articleContent).length;
@@ -200,6 +203,7 @@ onMounted(() => {
 })
 </script>
 
+<!--层叠样式表内容-->
 <style lang="scss" scoped>
 @import "@/assets/styles/mixin.scss";
 
