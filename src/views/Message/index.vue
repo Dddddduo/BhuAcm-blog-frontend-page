@@ -10,7 +10,10 @@
   <!-- 弹幕列表 -->
   <div class="danmaku-container">
 
-		<vue-danmaku ref="danmaku" class="danmaku" use-slot v-model:danmus="messageList" :is-suspend="true"  >
+<!--		vue-danmaku是一个单独的组件 -->
+
+<!--		todo 把弹幕播放改成循环的-->
+		<vue-danmaku  loop :channels="15" ref="danmaku" class="danmaku" use-slot v-model:danmus="messageList":is-suspend="true">
       <template v-slot:dm="{ danmu }">
         <span class="danmaku-item">
           <img :src="danmu.avatar" width="30" height="30" style="border-radius: 50%" />
@@ -19,6 +22,8 @@
         </span>
       </template>
     </vue-danmaku>
+
+<!--		<Danmaku :danmus="messageList" style="height:100px; width:300px;"></Danmaku>-->
 
   </div>
 </template>
@@ -35,9 +40,12 @@ const show = ref(false);
 const danmaku = ref();
 const messageList = ref<Message[]>([]);
 onMounted(async () => {
+
+	// 发起获取弹幕列表的请求
   await getMessageList().then(({ data }) => {
     messageList.value = data.data;
   });
+
 });
 const send = () => {
   if (messageContent.value.trim() == "") {
@@ -47,6 +55,9 @@ const send = () => {
 
 	console.log( 'name:',  blog.blogInfo.siteConfig );
 
+	// 用户头像
+	// 这些数据是从store里面获取的
+	// 加载home界面的时候就挂载到前端的类里面的
   const userAvatar = user.avatar ? user.avatar : blog.blogInfo.siteConfig.touristAvatar;
   const userNickname = user.nickname ? user.nickname : "游客";
   let message = {
