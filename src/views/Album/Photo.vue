@@ -1,7 +1,7 @@
 <template>
   <div class="page-header">
     <h1 class="page-title">{{ photoInfo.albumName }}</h1>
-    <img class="page-cover" src="https://static.ttkwsd.top/config/0639b8855aab4dcbb827a9884e8ec57d.jpg" alt="">
+    <img class="page-cover" src="https://ooo.0x0.ooo/2024/12/15/OLw6zb.jpg" alt="">
     <Waves></Waves>
   </div>
   <div class="bg">
