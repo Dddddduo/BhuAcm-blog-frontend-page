@@ -13,6 +13,7 @@ export const request = createRequest<App.Service.Response>(
 		async onRequest(config) {
 			// 请求带token
 			if (getToken()) {
+				// Authorization -> satoken
 				config.headers["Authorization"] = token_prefix + getToken();
 			}
 
