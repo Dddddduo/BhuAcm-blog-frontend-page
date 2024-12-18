@@ -38,6 +38,7 @@ requests.interceptors.request.use(
 // 配置响应拦截器
 requests.interceptors.response.use(
 	(response: AxiosResponse) => {
+		console.log("当前状态:",response.data)
 		switch (response.data.code) {
 			case -1:
 				window.$message?.error(response.data.msg);
