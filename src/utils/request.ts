@@ -14,7 +14,8 @@ const { baseURL } = getServiceBaseURL(import.meta.env, isHttpProxy);
 
 const requests = axios.create({
 	baseURL,
-	timeout: 10000,
+	// 超时时间 deepseek实在是太慢了
+	timeout: 10000000,
 	// 请求头
 	headers: {
 		"Content-Type": "application/json;charset=UTF-8",

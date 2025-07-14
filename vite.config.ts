@@ -5,6 +5,7 @@ import {
 	createViteProxy,
 	setupVitePlugins
 } from "./build";
+
 export default defineConfig((configEnv) => {
 	const viteEnv = loadEnv(
 		configEnv.mode,
@@ -28,9 +29,9 @@ export default defineConfig((configEnv) => {
 		plugins: setupVitePlugins(viteEnv),
 		server: {
 			host: "127.0.0.1",
-			port: 8100,
+			port: 8102,
 			// 项目启动后自动打开浏览器
-			// open: true,
+			open: true,
 			proxy: createViteProxy(viteEnv),
 		},
 		build: {
