@@ -110,6 +110,14 @@ export const routes: RouteRecordRaw[] = [
 		},
 	},
 	{
+		name: "chatgpt",
+		path: "/chatgpt",
+		component: () => import("@/views/Chatgpt/index.vue"),
+		meta: {
+			title: "文章",
+		},
+	},
+	{
 		path: "/404",
 		component: () => import("@/views/404/index.vue"),
 		meta: {

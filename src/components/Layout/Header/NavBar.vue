@@ -104,16 +104,26 @@ const menuList = [
   //   icon: "friend",
   //   path: "/friend"
   // },
-  {
-    name: "留言板",
-    icon: "message",
-    path: "/message"
-  },
-  {
-    name: "关于",
-    icon: "plane",
-    path: "/about"
-  },
+	{
+		name: "留言板",
+		icon: "message",
+		path: "/message"
+	},
+	{
+		name: "chatgpt",
+		icon: "talk",
+		path: "/chatgpt"
+	},
+	{
+		name: "最后的轻语",
+		icon: "flower",
+		path: "/log"
+	},
+	{
+		name: "关于",
+		icon: "user",
+		path: "/about"
+	}
 ];
 const logout = () => {
   if (route.path == "/user") {
